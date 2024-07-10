@@ -1,68 +1,112 @@
-# Astro Starter Kit: Blog
+# Astro Starter Kit: Portal Educativo de Ingeniería en IIA
 
-```sh
-npm create astro@latest -- --template blog
-```
+## 📚 Proyecto: Portal Educativo de Ingeniería en IIA
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/blog)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/blog)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/blog/devcontainer.json)
+Este proyecto tiene como objetivo crear un sitio web educativo donde se pueda consultar el contenido utilizado en cada materia cursada en la carrera de Ingeniería en IIA. El sitio permitirá a los estudiantes acceder a materiales de estudio, lecciones y recursos adicionales de manera organizada y fácil de navegar.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🚀 Estructura del (Proyecto al momento)
 
-![blog](https://github.com/withastro/astro/assets/2244813/ff10799f-a816-4703-b967-c78997e8323d)
-
-Features:
-
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and OpenGraph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
+Dentro de tu proyecto de Astro, verás las siguientes carpetas y archivos:
 
 ```text
-├── public/
-├── src/
-│   ├── components/
-│   ├── content/
-│   ├── layouts/
-│   └── pages/
 ├── astro.config.mjs
-├── README.md
 ├── package.json
+├── package-lock.json
+├── public
+│   ├── blog-placeholder-1.jpg
+│   ├── blog-placeholder-2.jpg
+│   ├── blog-placeholder-3.jpg
+│   ├── blog-placeholder-4.jpg
+│   ├── blog-placeholder-5.jpg
+│   ├── blog-placeholder-about.jpg
+│   ├── favicon.svg
+│   └── fonts
+│       ├── atkinson-bold.woff
+│       └── atkinson-regular.woff
+├── README.md
+├── src
+│   ├── components
+│   │   ├── CourseCard.astro
+│   │   ├── CourseContent.astro
+│   │   ├── CourseSidebar.astro
+│   │   ├── Footer.astro
+│   │   ├── Navbar.astro
+│   │   └── SemesterSection.astro
+│   ├── constants
+│   │   └── courses.ts
+│   ├── consts.ts
+│   ├── env.d.ts
+│   ├── layouts
+│   │   ├── BaseLayout.astro
+│   │   └── CourseLayout.astro
+│   ├── pages
+│   │   ├── course
+│   │   │   └── fundamentos-programacion
+│   │   │       ├── index.astro
+│   │   │       ├── leccion1.mdx
+│   │   │       └── leccion2.md
+│   │   └── index.astro
+│   ├── styles
+│   │   └── global.css
+│   └── types
+│       ├── Course.ts
+│       └── Semester.ts
+├── tailwind.config.mjs
 └── tsconfig.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Astro busca archivos `.astro` o `.md` en el directorio `src/pages/`. Cada página se expone como una ruta basada en su nombre de archivo.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+La carpeta `src/components/` contiene los componentes de Astro/Vue que se utilizan en el proyecto.
 
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
+El directorio `src/constants/` almacena archivos con constantes y configuraciones utilizadas en el proyecto.
 
-Any static assets, like images, can be placed in the `public/` directory.
+El directorio `src/layouts/` contiene los diseños utilizados en las páginas del proyecto.
 
-## 🧞 Commands
+El directorio `src/pages/` contiene las páginas del sitio. Cada página representa una materia o una sección del sitio.
 
-All commands are run from the root of the project, from a terminal:
+El directorio `src/types/` contiene definiciones de tipos TypeScript utilizadas en el proyecto.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Los recursos estáticos, como imágenes y fuentes, se colocan en el directorio `public/`.
 
-## 👀 Want to learn more?
+## 🧞 Comandos
 
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Todos los comandos se ejecutan desde la raíz del proyecto, desde una terminal:
 
-## Credit
+| Comando                   | Acción                                                     |
+| :------------------------ | :--------------------------------------------------------- |
+| `npm install`             | Instala las dependencias                                   |
+| `npm run dev`             | Inicia el servidor de desarrollo en `localhost:4321`       |
+| `npm run build`           | Construye tu sitio de producción en `./dist/`              |
+| `npm run preview`         | Previsualiza tu compilación localmente, antes de desplegar |
+| `npm run astro ...`       | Ejecuta comandos CLI como `astro add`, `astro check`       |
+| `npm run astro -- --help` | Obtén ayuda usando el CLI de Astro                         |
 
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+## 🔧 Extensiones Recomendadas para VSCode
+
+Para mantener el proyecto lo más limpio y organizado posible, se recomienda utilizar las siguientes extensiones en VSCode:
+
+- **Astro**: [Astro VSCode Extension](https://marketplace.visualstudio.com/items?itemName=astro-build.astro-vscode) - Soporte para el desarrollo de Astro.
+- **Tailwind CSS IntelliSense**: [Tailwind CSS IntelliSense Extension](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) - Autocompletado y sugerencias para clases de Tailwind CSS.
+- **Prettier - Code formatter**: [Prettier Extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - Formateador de código para mantener un estilo consistente.
+- **MDX**: [MDX Extension](https://marketplace.visualstudio.com/items?itemName=silvenon.mdx) - Soporte para archivos MDX.
+- **TypeScript**: [TypeScript Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-next) - Soporte mejorado para TypeScript.
+- **Path IntelliSense**: [Path IntelliSense Extension](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense) - Autocompletado de rutas de archivos.
+
+Estas extensiones ayudarán a mantener el código limpio, organizado y conforme a las mejores prácticas durante el desarrollo del proyecto.
+
+## 👀 ¿Quieres aprender más?
+
+Consulta [la documentación de Astro](https://docs.astro.build) o únete a su [servidor de Discord](https://astro.build/chat).
+
+## Crédits
+
+Los estilos están siendo generados a partir de [ TailwindCSS](https://tailwindcss.com/).
+
+## 🚧 Contribuciones
+
+Este README está dirigido a los desarrolladores que trabajan en este proyecto y a aquellos que deseen contribuir. El objetivo es proporcionar una visión general clara del proyecto y su estructura para facilitar el desarrollo y la colaboración. ¡Gracias por tu interés en contribuir!
+
+---
+
+**Nombre Temporal del Proyecto**: Portal Educativo de Ingeniería en IIA
