@@ -1,0 +1,20 @@
+---
+import type { Course } from '../types/Course';
+import CourseCard from './CourseCard.astro';
+
+interface Props {
+  semester: string;
+  courses: Course[];
+}
+
+const { semester, courses } = Astro.props as Props;
+---
+
+<section class="mt-8">
+  <h2 class="text-2xl font-bold mb-4">{semester}</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    {courses.map(course => (
+      <CourseCard {...course} />
+    ))}
+  </div>
+</section>

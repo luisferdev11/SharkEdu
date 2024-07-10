@@ -1,0 +1,34 @@
+---
+import Navbar from '../../../components/Navbar.astro';
+import Footer from '../../../components/Footer.astro';
+import CourseSidebar from '../../../components/CourseSidebar.astro';
+
+interface Section {
+  title: string;
+  link: string;
+}
+
+const sections: Section[] = [
+  { title: 'Introducción', link: '/course/fundamentos-programacion/leccion1' },
+  { title: 'Lesson 2', link: '/course/fundamentos-programacion/leccion2' },
+];
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fundamentos de Programación</title>
+    <link rel="stylesheet" href="/src/styles/globals.css" />
+  </head>
+  <body class="bg-gray-100 text-gray-900">
+    <Navbar />
+    <div class="container mx-auto flex p-4">
+      <CourseSidebar sections={sections} />
+      <main class="flex-1 p-4">
+        <slot />
+      </main>
+    </div>
+    <Footer />
+  </body>
+</html>
