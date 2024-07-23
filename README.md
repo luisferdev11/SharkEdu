@@ -1,6 +1,6 @@
 # Astro Starter Kit: Portal Educativo de Ingeniería en IIA
 
-## 📚 Proyecto: Portal Educativo de Ingeniería en IIA
+## 📚 Proyecto: SharkEdu
 
 Este proyecto tiene como objetivo crear un sitio web educativo donde se pueda consultar el contenido utilizado en cada materia cursada en la carrera de Ingeniería en IIA. El sitio permitirá a los estudiantes acceder a materiales de estudio, lecciones y recursos adicionales de manera organizada y fácil de navegar.
 
@@ -108,5 +108,3 @@ Los estilos están siendo generados a partir de [ TailwindCSS](https://tailwindc
 Este README está dirigido a los desarrolladores que trabajan en este proyecto y a aquellos que deseen contribuir. El objetivo es proporcionar una visión general clara del proyecto y su estructura para facilitar el desarrollo y la colaboración. ¡Gracias por tu interés en contribuir!
 
 ---
-
-**Nombre Temporal del Proyecto**: Portal Educativo de Ingeniería en IIA
