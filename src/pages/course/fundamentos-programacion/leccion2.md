@@ -1,4 +1,5 @@
 ---
+layout: ../../../layouts/CourseLayout.astro
 title: "Estructuras de Control"
 description: "Estructuras de control básicas en programación."
 ---

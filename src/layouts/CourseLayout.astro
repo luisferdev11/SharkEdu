@@ -2,24 +2,16 @@
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import CourseSidebar from '../components/CourseSidebar.astro';
+import { fundamentosDeProgramacionSections } from '../constants/sections';
 
-interface Section {
-  title: string;
-  link: string;
-}
-
-interface Props {
-  sections: Section[];
-}
-
-const { sections } = Astro.props as Props;
+const sections = fundamentosDeProgramacionSections;
 ---
 
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SharkEdu - Curso</title>
+    <title>SharkEdu - {sections[0].title}</title>
     <!-- <link rel="stylesheet" href="/src/styles/globals.css" /> -->
   </head>
   <body class="bg-background-primary text-tx-primary">
@@ -27,7 +19,9 @@ const { sections } = Astro.props as Props;
     <div class="container mx-auto flex p-4">
       <CourseSidebar sections={sections} />
       <main class="flex-1 p-4">
-        <slot />
+     
+          <slot />
+      
       </main>
     </div>
     <Footer />
