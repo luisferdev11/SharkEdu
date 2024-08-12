@@ -1,4 +1,6 @@
 ---
+import { ViewTransitions } from 'astro:transitions';
+
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import CourseSidebar from '../components/CourseSidebar.astro';
@@ -13,6 +15,7 @@ const sections = fundamentosDeProgramacionSections;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SharkEdu - {sections[0].title}</title>
     <!-- <link rel="stylesheet" href="/src/styles/globals.css" /> -->
+    <ViewTransitions />
   </head>
   <body class="bg-background-primary text-tx-primary">
     <Navbar />
