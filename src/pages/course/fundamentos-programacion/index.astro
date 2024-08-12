@@ -1,7 +1,5 @@
 ---
-import Navbar from '../../../components/Navbar.astro';
-import Footer from '../../../components/Footer.astro';
-import CourseSidebar from '../../../components/CourseSidebar.astro';
+import CourseLayout from '../../../layouts/CourseLayout.astro';
 
 interface Section {
   title: string;
@@ -11,24 +9,13 @@ interface Section {
 const sections: Section[] = [
   { title: 'Introducción', link: '/course/fundamentos-programacion/leccion1' },
   { title: 'Lesson 2', link: '/course/fundamentos-programacion/leccion2' },
+
+  { title: 'Lesson 3', link: '/course/fundamentos-programacion/leccion3' },
 ];
+
 ---
 
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fundamentos de Programación</title>
-    <link rel="stylesheet" href="/src/styles/globals.css" />
-  </head>
-  <body class="bg-gray-100 text-gray-900">
-    <Navbar />
-    <div class="container mx-auto flex p-4">
-      <CourseSidebar sections={sections} />
-      <main class="flex-1 p-4">
-        <slot />
-      </main>
-    </div>
-    <Footer />
-  </body>
-</html>
+<CourseLayout sections={sections}>
+  <h1 class="text-3xl font-bold mb-4">Fundamentos de Programación</h1>
+  <p class="text-lg text-tx-secondary mb-4">Este curso cubre los conceptos básicos de programación, incluyendo variables, estructuras de control, funciones y mucho más.</p>
+</CourseLayout>

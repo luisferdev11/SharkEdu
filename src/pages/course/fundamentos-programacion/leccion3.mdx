@@ -1,0 +1,101 @@
+### Lección 3: Punteros en C
+
+En esta lección, aprenderemos sobre los punteros en el lenguaje de programación C.
+
+### ¿Qué es un puntero?
+
+Un puntero es una variable que almacena la dirección de memoria de otra variable. En C, los punteros nos permiten acceder y manipular directamente la memoria de nuestro programa.
+
+### ¿Por qué usar punteros?
+
+1. **Eficiencia**: Los punteros permiten manipular grandes estructuras de datos sin necesidad de copiarlas.
+2. **Flexibilidad**: Facilitan la creación de estructuras de datos dinámicas como listas enlazadas, árboles y grafos.
+3. **Interacción con hardware**: Son esenciales para la programación a bajo nivel y la interacción directa con el hardware.
+
+### Declaración de un puntero
+
+Para declarar un puntero, utilizamos el operador `*`. Aquí hay un ejemplo:
+
+```c
+int *ptr;
+```
+
+En este caso, `ptr` es un puntero a un entero.
+
+### Asignación de una dirección a un puntero
+
+Para asignar una dirección de memoria a un puntero, utilizamos el operador `&` (operador de dirección):
+
+```c
+int var = 10;
+int *ptr = &var;
+```
+
+Aquí, `ptr` ahora contiene la dirección de memoria de `var`.
+
+### Acceso al valor apuntado por un puntero
+
+Para acceder al valor almacenado en la dirección de memoria a la que apunta un puntero, utilizamos el operador `*` (operador de desreferencia):
+
+```c
+int var = 10;
+int *ptr = &var;
+printf("El valor de var es: %d\n", *ptr);
+```
+
+Esto imprimirá `10`, que es el valor de `var`.
+
+### Ejemplo completo
+
+Vamos a ver un ejemplo completo que ilustra la declaración, asignación y desreferencia de punteros:
+
+```c
+#include <stdio.h>
+
+int main() {
+    int var = 10;      // Declaración de una variable entera
+    int *ptr;          // Declaración de un puntero a entero
+
+    ptr = &var;        // Asignación de la dirección de var al puntero ptr
+
+    // Imprimir la dirección de var
+    printf("La dirección de var es: %p\n", (void*)&var);
+
+    // Imprimir la dirección almacenada en ptr
+    printf("La dirección almacenada en ptr es: %p\n", (void*)ptr);
+
+    // Imprimir el valor de var usando el puntero
+    printf("El valor de var es: %d\n", *ptr);
+
+    return 0;
+}
+```
+
+### Punteros y Arrays
+
+Los punteros y los arrays están estrechamente relacionados en C. El nombre de un array es en realidad un puntero a su primer elemento.
+
+```c
+int arr[3] = {1, 2, 3};
+int *ptr = arr;
+
+for (int i = 0; i < 3; i++) {
+    printf("arr[%d] = %d\n", i, *(ptr + i));
+}
+```
+
+### Punteros a punteros
+
+También podemos tener punteros que apuntan a otros punteros. Esto se llama punteros a punteros.
+
+```c
+int var = 10;
+int *ptr = &var;
+int **pptr = &ptr;
+
+printf("El valor de var es: %d\n", **pptr);
+```
+
+### Conclusión
+
+Los punteros son una herramienta poderosa en C que permiten un control detallado sobre la memoria y la eficiencia del programa. Aunque pueden parecer complicados al principio, con práctica y comprensión, se vuelven una parte esencial de la programación en C.
