@@ -1,17 +1,7 @@
 ---
 import CourseLayout from '../../../layouts/CourseLayout.astro';
 
-interface Section {
-  title: string;
-  link: string;
-}
-
-const sections: Section[] = [
-  { title: 'Introducción', link: '/course/fundamentos-programacion/leccion1' },
-  { title: 'Lesson 2', link: '/course/fundamentos-programacion/leccion2' },
-
-  { title: 'Lesson 3', link: '/course/fundamentos-programacion/leccion3' },
-];
+import { fundamentosDeProgramacionSections as sections } from '../../../constants/sections';
 
 ---
 

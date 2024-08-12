@@ -1,8 +1,11 @@
 ---
-layout: ../../../layouts/CourseLayout.astro
 title: Introducción a las Variables
 ---
 
+import CourseLayout from "../../../layouts/CourseLayout.astro";
+import { fundamentosDeProgramacionSections as sections } from "../../../constants/sections";
+
+<CourseLayout sections={sections}>
 # Introducción a las Variables
 
 En esta lección, aprenderás qué son las variables y cómo se utilizan en programación.
@@ -18,3 +21,5 @@ print(x, y)
 ```
 
 En el ejemplo anterior, `x` es una variable que almacena un número entero (`int`) y `y` es una variable que almacena una cadena de texto (`str`).
+
+</CourseLayout>

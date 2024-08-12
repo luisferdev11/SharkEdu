@@ -1,9 +1,12 @@
 ---
-layout: ../../../layouts/CourseLayout.astro
 title: "Estructuras de Control"
 description: "Estructuras de control básicas en programación."
 ---
 
+import CourseLayout from "../../../layouts/CourseLayout.astro";
+import { fundamentosDeProgramacionSections as sections } from "../../../constants/sections";
+
+<CourseLayout sections={sections}>
 # Estructuras de Control
 
 En esta lección, aprenderás sobre las estructuras de control, como los condicionales y los bucles, que se utilizan para controlar el flujo de un programa.
@@ -27,3 +30,5 @@ Los bucles permiten que un programa ejecute una parte del código varias veces.
 for i in range(5):
     print(i)
 ```
+
+</CourseLayout>

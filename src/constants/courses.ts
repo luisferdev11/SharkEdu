@@ -12,33 +12,14 @@ export const coursesSemester1: Course[] = [
     description: "Estudio de estructuras matemáticas discretas.",
     link: "/course/matematicas-discretas",
   },
-
-  {
-    title: "Introducción a la Ingeniería de Software",
-    description: "Conceptos básicos de la ingeniería de software.",
-    link: "/course/introduccion-ingenieria-software",
-  },
-
-  {
-    title: "Cálculo Diferencial",
-    description: "Estudio de las derivadas y sus aplicaciones.",
-    link: "/course/calculo-diferencial",
-  },
-  // Añadir más cursos
 ];
 
 export const coursesSemester2: Course[] = [
   {
-    title: "Estructuras de Datos",
+    title: "Algoritmos y Estructuras de Datos",
     description: "Conceptos y técnicas para manipular estructuras de datos.",
     link: "/course/estructuras-datos",
   },
-  {
-    title: "Cálculo Multivariable",
-    description: "Cálculo en varias variables y sus aplicaciones.",
-    link: "/course/calculo-multivariable",
-  },
-  // Añadir más cursos
 ];
 
 export const coursesSemester3: Course[] = [
@@ -50,16 +31,33 @@ export const coursesSemester3: Course[] = [
     teacher: "De la GOD",
   },
   {
-    title: "Cálculo Multivariable",
-    description: "Cálculo en varias variables y sus aplicaciones.",
-    link: "/course/calculo-multivariable",
+    title: "Bases de Datos",
+    description: "Introducción a las bases de datos.",
+    link: "/course/bases-datos",
+  },
+
+  {
+    title: "Análisis y Diseño de Algoritmos",
+    description: "Introducción a la Análisis y Diseño de Algoritmos",
+    link: "/course/analisis-algoritmos",
   },
   // Añadir más cursos
+];
+
+export const coursesSemester4: Course[] = [
+  {
+    title: "Tecnologías para el Desarrollo de Aplicaciones Web",
+    description:
+      "Conceptos y técnicas para trabajar con diferentes Tecnologías para el Desarrollo de Aplicaciones Web",
+    link: "/course/estructuras-datos",
+    teacher: "Alex Soto",
+  },
 ];
 
 export const semesters: Semester[] = [
   { name: "Semestre 1", courses: coursesSemester1 },
   { name: "Semestre 2", courses: coursesSemester2 },
   { name: "Semestre 3", courses: coursesSemester3 },
+  { name: "Semestre 4", courses: coursesSemester4 },
   // Añadir más semestres
 ];

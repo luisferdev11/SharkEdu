@@ -1,8 +1,11 @@
 ---
-layout: ../../../layouts/CourseLayout.astro
 title: Punteros en C
 ---
 
+import CourseLayout from "../../../layouts/CourseLayout.astro";
+import { fundamentosDeProgramacionSections as sections } from "../../../constants/sections";
+
+<CourseLayout sections={sections}>
 ### Lección 3: Punteros en C
 
 En esta lección, aprenderemos sobre los punteros en el lenguaje de programación C.
@@ -104,3 +107,5 @@ printf("El valor de var es: %d\n", **pptr);
 ### Conclusión
 
 Los punteros son una herramienta poderosa en C que permiten un control detallado sobre la memoria y la eficiencia del programa. Aunque pueden parecer complicados al principio, con práctica y comprensión, se vuelven una parte esencial de la programación en C.
+
+</CourseLayout>

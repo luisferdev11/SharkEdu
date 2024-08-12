@@ -4,9 +4,14 @@ import { ViewTransitions } from 'astro:transitions';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import CourseSidebar from '../components/CourseSidebar.astro';
-import { fundamentosDeProgramacionSections } from '../constants/sections';
+// import { fundamentosDeProgramacionSections } from '../constants/sections';
+import type { Section } from '../types/Section';
 
-const sections = fundamentosDeProgramacionSections;
+interface Props {
+  sections: Section[];
+}
+
+const { sections } = Astro.props as Props;
 ---
 
 <html lang="es">
@@ -22,9 +27,9 @@ const sections = fundamentosDeProgramacionSections;
     <div class="container mx-auto flex p-4">
       <CourseSidebar sections={sections} />
       <main class="flex-1 p-4">
-     
+
           <slot />
-      
+
       </main>
     </div>
     <Footer />
