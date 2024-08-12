@@ -11,12 +11,12 @@ interface Props {
 const { sections } = Astro.props as Props;
 ---
 
-<aside class="w-64 bg-gray-100 p-4">
-  <h2 class="text-lg font-semibold mb-4">Contenido del Curso</h2>
+<aside class="w-64 bg-background-secondary p-4">
+  <h2 class="text-lg font-semibold text-tx-primary mb-4">Contenido del Curso</h2>
   <ul>
     {sections.map(section => (
       <li class="mb-2">
-        <a href={section.link} class="text-blue-500 hover:underline">{section.title}</a>
+        <a href={section.link} class="text-accent hover:underline">{section.title}</a>
       </li>
     ))}
   </ul>

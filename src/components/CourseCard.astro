@@ -4,10 +4,10 @@ import type { Course } from '../types/Course';
 const { title, description, link, teacher } = Astro.props as Course;
 ---
 
-<div class="bg-white shadow-md rounded-lg p-4">
-  <h2 class="text-xl font-semibold">{title}</h2>
-  <p class="mt-2 text-gray-600">{description}</p>
+<div class="bg-background-secondary shadow-md rounded-lg p-4">
+  <h2 class="text-xl font-semibold text-tx-primary">{title}</h2>
+  <p class="mt-2 text-tx-secondary">{description}</p>
   <!-- Si hay profesor mostrarlo -->
-    {teacher && <p class="mt-2 text-gray-600 font-thin text-sm">Impartida por: {teacher}</p>}
-  <a href={link} class="mt-4 inline-block text-blue-500 hover:underline">Ver más</a>
+  {teacher && <p class="mt-2 text-tx-secondary font-thin text-sm">Impartida por: {teacher}</p>}
+  <a href={link} class="mt-4 inline-block text-accent hover:underline">Ver más</a>
 </div>
