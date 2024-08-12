@@ -1,0 +1,165 @@
+---
+title: "Programita 1: Operaciones con Conjuntos"
+description: "Programa en Python que realiza operaciones con conjuntos matemáticos."
+---
+
+import CourseLayout from "../../../layouts/CourseLayout.astro";
+
+import { matematicasDiscretasSections as sections } from "../../../constants/sections";
+
+<CourseLayout sections={sections}>
+
+### **Descripción del Problema a Resolver**
+
+El problema que este programa pretende resolver es realizar operaciones básicas sobre conjuntos, específicamente con tres conjuntos \( A \), \( B \), y \( C \), en el contexto de un conjunto universal \( U \). Las operaciones involucradas incluyen uniones, intersecciones, diferencias, complementos, y la obtención del conjunto potencia (todos los subconjuntos posibles) de estos conjuntos.
+
+El programa está diseñado para:
+
+1. **Crear el conjunto universal \( U \)**: Este conjunto incluye todos los números desde \(-a\) hasta \(a\), donde \(a\) es un valor ingresado por el usuario.
+2. **Crear conjuntos \( A \), \( B \), y \( C \)**: Basados en diferentes criterios, como números impares y divisibilidad.
+3. **Realizar operaciones específicas** entre estos conjuntos, comparando los resultados y obteniendo los conjuntos potencia.
+
+### **Solución Propuesta y Justificación**
+
+#### **1. Creación del Conjunto Universal \( U \)**
+
+**Problema:** Se necesita un conjunto universal que abarque todos los números dentro de un rango definido por el usuario.
+
+**Solución:** Se implementa la función `createUniverse(a)`, que genera una lista de números desde \(-a\) hasta \(a\). Esta lista se convierte en un conjunto \( U \) que contiene todos los elementos necesarios para las operaciones posteriores.
+
+```python
+def createUniverse(a):
+    conjunto = []
+    for element in range(-a, a+1):
+        conjunto.append(element)
+    return conjunto
+```
+
+**Justificación:** Esta función garantiza que el conjunto universal \( U \) sea simétrico en torno a cero y cubra todos los valores posibles en el rango definido, cumpliendo así con la necesidad de un conjunto base para las operaciones.
+
+#### **2. Creación de los Conjuntos \( A \), \( B \), y \( C \)**
+
+- **Conjunto \( A \):** Contiene todos los números impares en \( U \).
+
+  **Solución:** Se utiliza la función `getOddUniverse(U)` que filtra los números impares del conjunto \( U \).
+
+  ```python
+  def getOddUniverse(U):
+      return [oddElement for oddElement in U if oddElement % 2 == 1]
+  ```
+
+  **Justificación:** El conjunto \( A \) se define como un subconjunto de \( U \) que contiene solo los números impares. Esto es útil para trabajar con subconjuntos específicos del universo.
+
+- **Conjunto \( B \):** Contiene los números del 1 al \( c \), donde \( c \) es un valor definido por el usuario.
+
+  **Solución:** Se implementa la función `createSetB(c)`.
+
+  ```python
+  def createSetB(c):
+      conjunto = []
+      for element in range(c):
+          conjunto.append(element + 1)
+      return conjunto
+  ```
+
+  **Justificación:** Esta función asegura que el conjunto \( B \) esté bien definido dentro del universo, conteniendo una secuencia natural de números que va de 1 a \( c \).
+
+- **Conjunto \( C \):** Contiene los elementos de \( U \) que son divisibles por un número \( d \), definido por el usuario.
+
+  **Solución:** Se utiliza la función `createSetC(U, d)`.
+
+  ```python
+  def createSetC(U, d):
+      if d == 0:
+          return []
+      return [element for element in U if element % d == 0]
+  ```
+
+  **Justificación:** El conjunto \( C \) se define según una propiedad específica (divisibilidad por \( d \)), lo que permite analizar relaciones entre elementos de \( U \) basadas en divisores comunes.
+
+#### **3. Operaciones entre Conjuntos**
+
+El programa define tres operaciones principales entre los conjuntos \( A \), \( B \), y \( C \), todas en el contexto del conjunto universal \( U \).
+
+- **Operación 1: \((A \cup B)^c \cap (A \cup C)^c\)**
+
+  **Solución:** Esta operación se resuelve en la función `task1(A, B, C, U)`.
+
+  ```python
+  def task1(A, B, C, U):
+      izquierda = A.union(B).complement(U)
+      derecha = A.union(C).complement(U)
+      total = izquierda.intersection(derecha)
+      return total
+  ```
+
+  **Justificación:** Esta operación combina la unión de conjuntos con el complemento, seguida de una intersección. Esto permite explorar elementos que no están en las uniones \( A \cup B \) y \( A \cup C \), analizando así el espacio común excluido por ambas uniones.
+
+- **Operación 2: \((A \cap B \cap C)^c\)**
+
+  **Solución:** Se implementa en la función `task2(A, B, C, U)`.
+
+  ```python
+  def task2(A, B, C, U):
+      total = A.intersection(B).intersection(C).complement(U)
+      return total
+  ```
+
+  **Justificación:** Esta operación calcula el complemento de la intersección de los tres conjuntos, lo que permite identificar elementos en \( U \) que no están en \( A \cap B \cap C \).
+
+- **Operación 3: \((A \cap B)^c \cup (A \cap C)^c\)**
+
+  **Solución:** Implementada en la función `task3(A, B, C, U)`.
+
+  ```python
+  def task3(A, B, C, U):
+      izquierda = A.intersection(B).complement(U)
+      derecha = A.intersection(C).complement(U)
+      total3 = izquierda.union(derecha)
+      return total3
+  ```
+
+  **Justificación:** Esta operación combina los complementos de las intersecciones \( A \cap B \) y \( A \cap C \) mediante una unión, analizando así los elementos excluidos por las intersecciones, pero en diferentes combinaciones.
+
+#### **4. Cálculo del Conjunto Potencia**
+
+**Problema:** Es necesario obtener todos los subconjuntos posibles (conjunto potencia) del conjunto universal \( U \) y de los resultados de las operaciones.
+
+**Solución:** Se utilizan las funciones `calc_powerset` y `get_powerset` en la clase `Set`.
+
+```python
+def calc_powerset(self, seq):
+    if len(seq) == 0:
+        yield seq
+    if len(seq) == 1:
+        yield seq
+        yield []
+    elif len(seq) > 1:
+        for item in self.calc_powerset(seq[1:]):
+            yield [seq[0]]+item
+            yield item
+
+def get_powerset(self):
+    my_powerset = Set()
+    for element in self.calc_powerset(self.set):
+        my_powerset.add(element)
+    return my_powerset
+```
+
+**Justificación:** Estas funciones calculan y devuelven todos los posibles subconjuntos de un conjunto dado. El conjunto potencia es una herramienta fundamental en la teoría de conjuntos, ya que permite analizar todas las combinaciones posibles de inclusión de elementos en un subconjunto.
+
+#### **5. Ejecución Interactiva y Resultados**
+
+**Problema:** Permitir al usuario ejecutar el programa repetidamente, ingresando diferentes valores y viendo los resultados de las operaciones en tiempo real.
+
+**Solución:** El ciclo principal del programa (`while go`) permite una interacción continua, solicitando entradas del usuario y mostrando resultados hasta que el usuario decida salir.
+
+**Justificación:** Esto asegura que el usuario pueda experimentar con diferentes conjuntos y comprender cómo las operaciones de conjuntos afectan los resultados, facilitando un aprendizaje interactivo y práctico.
+
+---
+
+### **Resumen**
+
+El programa propuesto resuelve el problema de realizar operaciones avanzadas sobre conjuntos y obtener el conjunto potencia de estos. Cada componente del programa está diseñado para cumplir un propósito específico dentro del contexto de la teoría de conjuntos, y las soluciones implementadas garantizan que se cumplan los requisitos necesarios de forma eficiente y comprensible para los usuarios.
+
+</CourseLayout>

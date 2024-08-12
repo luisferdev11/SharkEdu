@@ -7,3 +7,11 @@ export const fundamentosDeProgramacionSections: Section[] = [
   { title: "Lesson 2", link: "/course/fundamentos-programacion/leccion2" },
   { title: "Lesson 3", link: "/course/fundamentos-programacion/leccion3" },
 ];
+
+export const matematicasDiscretasSections: Section[] = [
+  { title: "Inicio", link: "/course/matematicas-discretas" },
+  {
+    title: "Primer programita",
+    link: "/course/matematicas-discretas/programita1",
+  },
+];

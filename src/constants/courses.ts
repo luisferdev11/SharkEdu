@@ -11,6 +11,7 @@ export const coursesSemester1: Course[] = [
     title: "Matemáticas Discretas",
     description: "Estudio de estructuras matemáticas discretas.",
     link: "/course/matematicas-discretas",
+    teacher: "DarwinCoito",
   },
 ];
 
