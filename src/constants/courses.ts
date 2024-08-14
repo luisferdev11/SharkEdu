@@ -28,7 +28,7 @@ export const coursesSemester3: Course[] = [
     title: "Paradigmas de programación",
     description:
       "Conceptos y técnicas para trabajar con diferentes paradigmas de programación.",
-    link: "/course/estructuras-datos",
+    link: "/course/paradigmas-programacion",
     teacher: "De la GOD",
   },
   {

@@ -1,0 +1,119 @@
+---
+title: Examen extraordinario
+description: Examen extraordinario de Paradigmas de Programación con preguntas sobre paradigmas lógico, funcional, orientado a objetos y orientado a eventos.
+---
+
+import CourseLayout from "../../../layouts/CourseLayout.astro";
+
+import { paradigmasProgramacionSections as sections } from "../../../constants/sections";
+
+<CourseLayout sections={sections}>
+
+# Instituto Politécnico Nacional
+
+## Escuela Superior de Cómputo
+
+### Paradigmas de Programación
+
+**Examen extraordinario**
+
+**Viernes 5 de julio del 2024**
+
+### Paradigma lógico
+
+Empleando SWI Prolog resuelva lo siguiente:
+
+1. Representar la información relativa a las siguientes familias:
+
+   - En la primera familia:
+
+     - el padre es Tomás García Pérez, nacido el 7 de mayo de 1960, trabaja de profesor y gana 60 euros diarios;
+     - la madre es Ana López Ruiz, nacida el 10 de marzo de 1962, trabaja de médica y gana 90 euros diarios;
+     - el hijo es Juan García López, nacido el 5 de enero de 1980, estudiante;
+     - la hija es María García López, nacida el 12 de abril de 1992, estudiante.
+
+   - En la segunda familia:
+     - el padre es José Pérez Ruiz, nacido el 6 de marzo de 1963, trabaja de pintor y gana 120 euros diarios;
+     - la madre es Luisa Gálvez Pérez, nacida el 12 de mayo de 1964, trabaja de médica y gana 90 euros diarios;
+     - un hijo es Juan Luis Pérez Pérez, nacido el 5 de febrero de 1990, estudiante;
+     - una hija es María José Pérez Pérez, nacida el 12 de junio de 1992, estudiante;
+     - otro hijo es José María Pérez Pérez, nacido el 12 de Julio de 1994, estudiante.
+
+2. Realizar las siguientes consultas:
+
+   - ¿existe familia sin hijos?
+   - ¿existe familia con un hijo?
+   - ¿existe familia con dos hijos?
+   - ¿existe familia con tres hijos?
+   - ¿existe familia con cuatro hijos?
+
+3. Buscar los nombres de los padres de familia con tres hijos.
+
+4. Definir la relación `casado(X)` que se verifique si X es un hombre casado.
+
+5. Preguntar por los hombres casados.
+
+6. Definir la relación `casada(X)` que se verifique si X es una mujer casada.
+
+7. Preguntar por las mujeres casadas.
+
+8. Determinar el nombre de todas las mujeres casadas que trabajan.
+
+9. Definir la relación `hijo(X)` que se verifique si X figura en alguna lista de hijos.
+
+10. Preguntar por los hijos.
+
+### Paradigma funcional
+
+1. En climas fríos, los meteorólogos reportan un índice llamado factor de sensación térmica, que tiene en cuenta la velocidad del viento y la temperatura. El índice proporciona una medida del efecto de enfriamiento del viento a una temperatura del aire dada. La sensación térmica se puede aproximar mediante la fórmula:
+
+```
+
+W = 13.12 + 0.6215 _ t - 11.37 _ v^0.16 + 0.3965 _ t _ v^0.16
+
+```
+
+donde:
+
+- `v` = velocidad del viento en m/s
+- `t` = temperatura en grados Celsius: t < = 10
+- `W` = índice de sensación térmica (en grados Celsius)
+
+Escriba programación funcional polimórfica para resolver y que devuelva el índice de sensación térmica. Su código debe garantizar que no se viole la restricción de temperatura.
+
+### Paradigma Orientado a Objetos
+
+De acuerdo a lo visto en este paradigma y del siguiente diagrama de clases Java:
+
+1. Resuelva con lenguaje Java pensando que el Batimovil es más Tanque de Guerra que las otras dos.
+
+2. Escriba Constructores y destructores para todas las clases, recuerde a la clase `Object` y úsela.
+
+3. Emplee `equals()` y `toString()` en todas sus clases.
+
+4. Incluya de forma correcta en su código el nombre del rol que falta en el diagrama:
+
+```
+
+Transporte
+├── Terrestre
+│ ├── Automovil
+│ ├── Motocicleta
+│ └── TanqueDeGuerra
+└── Batimovil
+
+```
+
+5. Redefina todos los métodos que use en su jerarquía y en la Agregación.
+
+6. Defina la clase más alta de la jerarquía como `abstract` y cree polimorfismo UPCASTING con ella.
+
+7. Cree su clase principal y en otra clase diferente emplee absolutamente todo lo programado.
+
+**NOTA:** No deje clases sin atributos.
+
+### Paradigma Orientado a Eventos
+
+De la GUI de la imagen anterior programe con la API de Java Swing empleando los componentes que usted ve en ella y usando el patrón Modelo-Vista-Control controle los cinco eventos que se muestran en la figura.
+
+</CourseLayout>

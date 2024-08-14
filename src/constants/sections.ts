@@ -15,3 +15,11 @@ export const matematicasDiscretasSections: Section[] = [
     link: "/course/matematicas-discretas/programita1",
   },
 ];
+
+export const paradigmasProgramacionSections: Section[] = [
+  { title: "Inicio", link: "/course/paradigmas-programacion" },
+  {
+    title: "Extraordinario",
+    link: "/course/paradigmas-programacion/extraordinario",
+  },
+];
