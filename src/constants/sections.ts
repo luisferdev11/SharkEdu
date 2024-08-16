@@ -23,3 +23,11 @@ export const paradigmasProgramacionSections: Section[] = [
     link: "/course/paradigmas-programacion/extraordinario",
   },
 ];
+
+export const analisisAlgoritmosSections: Section[] = [
+  { title: "Inicio", link: "/course/analisis-algoritmos" },
+  {
+    title: "Extraordinario",
+    link: "/course/analisis-algoritmos/extraordinario",
+  },
+];
