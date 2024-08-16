@@ -6,6 +6,7 @@ export const coursesSemester1: Course[] = [
     title: "Fundamentos de Programación",
     description: "Introducción a los conceptos básicos de programación.",
     link: "/course/fundamentos-programacion",
+    teacher: "Ana Belem",
   },
   {
     title: "Matemáticas Discretas",
@@ -20,6 +21,7 @@ export const coursesSemester2: Course[] = [
     title: "Algoritmos y Estructuras de Datos",
     description: "Conceptos y técnicas para manipular estructuras de datos.",
     link: "/course/estructuras-datos",
+    teacher: "GGG",
   },
 ];
 
@@ -35,12 +37,14 @@ export const coursesSemester3: Course[] = [
     title: "Bases de Datos",
     description: "Introducción a las bases de datos.",
     link: "/course/bases-datos",
+    teacher: "Ivan Blanco",
   },
 
   {
     title: "Análisis y Diseño de Algoritmos",
     description: "Introducción a la Análisis y Diseño de Algoritmos",
     link: "/course/analisis-algoritmos",
+    teacher: "Ana Belem",
   },
   // Añadir más cursos
 ];
