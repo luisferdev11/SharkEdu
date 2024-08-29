@@ -1,0 +1,130 @@
+---
+title: Ordenamiento de Valores
+---
+
+import CourseLayout from "../../../layouts/CourseLayout.astro";
+
+import { algoritmosEstructurasSections as sections } from "../../../constants/sections";
+
+<CourseLayout sections={sections}>
+# Ordenamiento
+
+## Problema del Ordenamiento
+Para nosotros los humanos es muy facil ver una lista corta de numeros y poder a simple vista ver y ordenar los numeros ya sea de menora a mayor o viceversa
+Pero la computadora tiene que seguir un algoritmo para poder resolver este tipo de problema.
+
+## Tipos de Algoritmos
+Existen muchos algorimtos de ordenamiento, dentro del curso el profesor puede ver todos los principales o simplemente los que le parezcan sean los mas utiles,
+pero es importante conocer la mayoria para ver porque unos son mas eficientes que otros
+
+## Partes del ordenamiento
+
+
+### Algoritmo Burbuja (bubblesort)
+Probablemente el mas ineficiente que todos ya que va recorriendo la lista de nuestros numeros uno por uno, agarra el primer indice y lo compara con toda la lista, ya que 
+termino de ordenar ese elemento, lo vuelve a hacer con el segundo elemento,
+```c
+ for (i=1; i<TAM; i++){
+      for (j=0 ; j<TAM - 1; j++){
+           if (arr[j] > arr[j+1])
+                temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+        }
+ }
+```
+
+### Seleccion
+El algoritmo de selección es más eficiente que el de burbuja en algunos casos. Funciona seleccionando el elemento más pequeño de el arreglo y colocándolo en la primera posición. 
+Luego, busca el segundo elemento más pequeño y lo coloca en la segunda posición, y así sucesivamente. 
+```c
+for (i = 0; i < TAM - 1; i++) {
+    min_indice = i;
+    for (j = i + 1; j < TAM; j++) {
+        if (arr[j] < arr[min_indice]) {
+            min_indice = j;
+        }
+    }
+    temp = arr[min_indice];
+    arr[min_indice] = arr[i];
+    arr[i] = temp;
+}
+
+```
+
+
+### Insercion
+El algoritmo de inserción construye la lista ordenada uno a uno. Comienza con el segundo elemento y lo compara con los elementos anteriores,
+ insertándolo en la posición correcta. Es eficiente para listas pequeñas o casi ordenadas.
+```c
+for (i = 1; i < TAM; i++) {
+    key = arr[i];
+    j = i - 1;
+    while (j >= 0 && arr[j] > key) {
+        arr[j + 1] = arr[j];
+        j = j - 1;
+    }
+    arr[j + 1] = key;
+}
+```
+
+### Mezcla (Merge Sort)
+Probablemente el mas complejo de todos pero sin lugar a duda el mas eficiente, este algoritmo emplea **DIVIDE Y VENCERAS** la cual es una estrategia
+para solucionar algoritmos los cuales pueden ser descompuestos y solucionarse de forma separada para despues mezclar estos resultados obtenidos y obtener
+un resultado de manera eficiente
+
+
+```c
+void merge(int arr[], int l, int m, int r) {
+    int n1 = m - l + 1;
+    int n2 = r - m;
+    int L[n1], R[n2];
+
+    for (i = 0; i < n1; i++)
+        L[i] = arr[l + i];
+    for (j = 0; j < n2; j++)
+        R[j] = arr[m + 1 + j];
+
+    i = 0;
+    j = 0;
+    k = l;
+    while (i < n1 && j < n2) {
+        if (L[i] <= R[j]) {
+            arr[k] = L[i];
+            i++;
+        } else {
+            arr[k] = R[j];
+            j++;
+        }
+        k++;
+    }
+
+    while (i < n1) {
+        arr[k] = L[i];
+        i++;
+        k++;
+    }
+
+    while (j < n2) {
+        arr[k] = R[j];
+        j++;
+        k++;
+    }
+}
+
+void mergeSort(int arr[], int l, int r) {
+    if (l < r) {
+        int m = l + (r - l) / 2;
+        mergeSort(arr, l, m);
+        mergeSort(arr, m + 1, r);
+        merge(arr, l, m, r);
+    }
+}
+```
+
+## Que aprendimos
+Dentro de este tema se ven las diferentes maneras de resolver un problema como lo es el ordenamiento, hay diferentes formas de resolverlo, 
+y esto funciona igual con otros tipos de algoritmos;  siempre cada programador tendra su manera de programar y su manera de llevar a cabo El
+programa.
+
+</CourseLayout>

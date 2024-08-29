@@ -20,7 +20,7 @@ export const coursesSemester2: Course[] = [
   {
     title: "Algoritmos y Estructuras de Datos",
     description: "Conceptos y técnicas para manipular estructuras de datos.",
-    link: "/course/estructuras-datos",
+    link: "/course/algoritmos-estructuras",
     teacher: "GGG god ",
   },
 ];
