@@ -31,3 +31,37 @@ export const analisisAlgoritmosSections: Section[] = [
     link: "/course/analisis-algoritmos/extraordinario",
   },
 ];
+export const algoritmosEstructurasSections: Section[] = [
+  {title: "Inicio", link :"/course/algoritmos-estructuras"},
+  {
+    title: "Algoritmos", link: "/course/algoritmos-estructuras/algoritmos"
+  },
+  {
+    title: "Complejidad Temporal", link:"/course/algoritmos-estructuras/complejidad"
+  },
+  {
+    title: "Ordenamiento", link: "/course/algoritmos-estructuras/ordenamiento"
+  },
+  {
+    title: "Busqueda", link: "/course/algoritmos-estructuras/busqueda"
+  },
+  {
+    title: "Estructuras de Datos", link: "/course/algoritmos-estructuras/estructuras"
+  },
+  {
+    title: "Pila", link: "/course/algoritmos-estructuras/pila"
+  },
+  {
+    title: "Cola", link: "/course/algoritmos-estructuras/cola"
+  },
+  {
+    title: "Listas", link: "/course/algoritmos-estructuras/listas"
+  },
+  {
+    title: "Arbol Binario", link: "/course/algoritmos-estructuras/arbol"
+  },
+  {
+    title: "Unico Examen ", link: "/course/algoritmos-estructuras/examen"
+  }
+
+]

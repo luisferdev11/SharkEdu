@@ -1,0 +1,35 @@
+---
+title: Complejidad Temporal
+---
+
+import CourseLayout from "../../../layouts/CourseLayout.astro";
+import { algoritmosEstructurasSections as sections } from "../../../constants/sections";
+
+<CourseLayout sections={sections}>
+  
+# Complejidad Temporal
+
+La complejidad temporal es una medida del tiempo que toma un algoritmo para completarse en función del tamaño de la entrada.
+Es algo muy importante que se analizara al estar viendo los diferentes tipos de algoritmos que tenemos 
+
+
+### Notación Big O
+
+La notación Big O se utiliza comúnmente para describir la complejidad temporal de un algoritmo. Big O proporciona un límite superior sobre el crecimiento de la complejidad temporal, lo que significa que describe el peor caso de cómo se comporta el algoritmo a medida que el tamaño de la entrada crece hacia el infinito.
+
+Algunas de las complejidades temporales más comunes incluyen:
+
+- **O(1)**: Tiempo constante. El tiempo de ejecución no depende del tamaño de la entrada.
+- **O(log n)**: Tiempo logarítmico. El tiempo de ejecución crece logarítmicamente con el tamaño de la entrada.
+- **O(n)**: Tiempo lineal. El tiempo de ejecución crece linealmente con el tamaño de la entrada.
+- **O(n log n)**: Tiempo linealítmico. Común en algoritmos de ordenación eficientes como el Merge Sort.
+- **O(n^2)**: Tiempo cuadrático. Común en algoritmos de fuerza bruta como el Bubble Sort.
+- **O(2^n)**: Tiempo exponencial. Común en algoritmos que exploran todas las posibles soluciones, como algunos algoritmos de backtracking.
+- **O(n!)**: Tiempo factorial. Usado en problemas como el de la Permutación Completa.
+
+## Importancia de la Complejidad Temporal
+
+La importancia de conocer la complejidad temporal de una lgoritmo es ver y analizar si nuestro algoritmo es eficiente, necesitamos algoritmos que sean eficaces y eficientes
+para asi poder tener un programa un sistema el cual no tarde tanto tiempo en el estar resilviendo un problema dado.
+
+</CourseLayout>
