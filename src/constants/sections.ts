@@ -78,6 +78,10 @@ export const algoritmosEstructurasSections: Section[] = [
 export const fundamentosInteligenciaArtificialSections: Section[] = [
   { title: "Inicio", link: "/course/fundamentos-inteligencia-artificial" },
   {
+    title: "Inteligencia e Inteligencia Artificial",
+    link: "/course/fundamentos-inteligencia-artificial/introduccion",
+  },
+  {
     title: "Agentes Inteligentes",
     link: "/course/fundamentos-inteligencia-artificial/agentes-inteligentes",
   },
