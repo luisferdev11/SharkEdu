@@ -1,0 +1,117 @@
+---
+title: Agentes Inteligentes
+---
+
+import CourseLayout from "../../../layouts/CourseLayout.astro";
+import { fundamentosInteligenciaArtificialSections as sections } from "../../../constants/sections";
+
+<CourseLayout sections={sections}>
+# 🌟 Introducción a los Agentes Inteligentes
+
+¡Bienvenido! En esta lección exploraremos los **agentes inteligentes**, aquellos sistemas diseñados para tomar decisiones autónomas basadas en su entorno. Los agentes son fundamentales en **Inteligencia Artificial (IA)**, ya que nos permiten crear sistemas que interactúan y responden a su entorno de forma eficiente.
+
+Al final de esta lección, entenderás:
+
+1. Qué es un agente y cuáles son sus componentes.
+2. Las características del entorno en el que operan.
+3. Los diferentes tipos de agentes y cómo funcionan.
+
+Vamos paso a paso. 🚶‍♂️
+
+---
+
+## 🧠 ¿Qué es un agente inteligente?
+
+Un **agente** es cualquier entidad que percibe su entorno y toma decisiones para lograr un objetivo. La magia de los agentes es que pueden actuar de manera autónoma, lo que significa que pueden adaptarse a lo que sucede a su alrededor sin intervención humana. ¡Imagina un robot que navega por una habitación sin que nadie le diga qué hacer!
+
+### 🚀 Componentes de un agente
+
+Cada agente está compuesto por:
+
+- **Sensores**: Recolectan información del entorno (piensa en las cámaras de un robot o los datos de un programa de software).
+- **Actuadores**: Realizan acciones en el entorno (pueden ser movimientos de un robot o acciones dentro de un sistema).
+- **Ciclo de percepción-acción**: El agente percibe, decide y actúa. Es un ciclo continuo.
+
+> **Ejemplo**: Un aspirador robótico usa sensores para detectar obstáculos (como paredes o muebles) y actuadores para moverse y limpiar.
+
+---
+
+## 🌍 El entorno del agente
+
+El **entorno** es el mundo en el que opera el agente, y no todos los entornos son iguales. La forma en que diseñamos el agente depende de las características de su entorno. Aquí algunos factores importantes:
+
+- **Totalmente observable vs. Parcialmente observable**: Si el agente tiene acceso a toda la información del entorno, diremos que es totalmente observable. Si no, es parcialmente observable.
+- **Determinista vs. No determinista**: En un entorno determinista, las acciones del agente siempre tienen el mismo resultado. En un entorno no determinista, los resultados pueden variar.
+- **Episódico vs. Secuencial**: En un entorno episódico, las acciones del agente no afectan futuras decisiones. En un entorno secuencial, lo que hace el agente hoy podría cambiar sus acciones futuras.
+- **Estático vs. Dinámico**: Un entorno estático no cambia mientras el agente decide qué hacer. Si el entorno cambia por sí solo, se considera dinámico.
+
+> **Ejemplo**: Un videojuego donde el mundo es el mismo cada vez que juegas sería un entorno **determinista y estático**. Por otro lado, si el entorno cambia mientras juegas, sería **dinámico**.
+
+---
+
+## 🔧 PEAS: Descomponiendo el Entorno de un Agente
+
+Cuando diseñamos un agente, solemos usar el marco **PEAS**, que nos ayuda a entender las **partes clave del entorno de un agente**. PEAS es un acrónimo de:
+
+- **P**erformance (Rendimiento): ¿Cómo evaluamos si el agente está funcionando bien? Por ejemplo, en el caso de un aspirador robótico, podríamos medir su rendimiento por la cantidad de suciedad que recoge.
+- **E**nvironment (Entorno): ¿En qué tipo de entorno opera el agente? Un entorno puede ser dinámico, estático, accesible o inaccesible.
+- **A**ctuators (Actuadores): ¿Qué puede hacer el agente? Estos son los mecanismos que le permiten interactuar con su entorno (por ejemplo, las ruedas de un robot).
+- **S**ensors (Sensores): ¿Qué usa el agente para percibir su entorno? Los sensores recogen la información necesaria para que el agente tome decisiones (como cámaras o micrófonos).
+
+> **Ejemplo de PEAS**:
+> Para un auto autónomo:
+>
+> - **P**: Seguridad, confort de los pasajeros, tiempo de llegada.
+> - **E**: Carreteras, tráfico, condiciones climáticas.
+> - **A**: Volante, frenos, acelerador.
+> - **S**: Cámaras, radares, GPS.
+
+---
+
+## 🤖 Estructura de los Agentes Inteligentes
+
+### 🔄 Agentes de Reflejo Simple
+
+Son los más básicos. Estos agentes toman decisiones basadas únicamente en el **estado actual del entorno**. No recuerdan lo que pasó antes, y no planean para el futuro.
+
+- **Funcionan bien** en entornos **totalmente observables**.
+- **Ejemplo**: Un termostato que se apaga o enciende según la temperatura actual es un agente de reflejo simple.
+
+### 🎯 Agentes Basados en Metas
+
+Estos agentes no solo reaccionan a su entorno, ¡también tienen **objetivos**! Ellos buscan alcanzar un objetivo específico y pueden evaluar diferentes opciones para encontrar el mejor camino.
+
+- **Funcionan mejor** en entornos donde se requiere planificación a largo plazo.
+- **Ejemplo**: Un robot que necesita encontrar una salida en un laberinto usa un enfoque basado en metas. Sabe a dónde quiere ir y planifica su ruta.
+
+### 📊 Agentes Basados en Utilidad
+
+Este tipo de agente es más sofisticado porque no solo busca alcanzar una meta, sino que también **evalúa la calidad de las posibles soluciones**. Su objetivo es **maximizar la utilidad** (es decir, encontrar la mejor solución posible).
+
+- **Ideal para** entornos complejos y dinámicos.
+- **Ejemplo**: Un sistema de recomendación (como el de Netflix) que no solo sugiere una película, sino la película que más te gustará, maximizando tu "satisfacción" (utilidad).
+
+### 🤖 Agentes que Aprenden
+
+Estos son los **más avanzados**. Además de tomar decisiones, los agentes que aprenden pueden **mejorar con el tiempo** basándose en experiencias pasadas. Aprenden de sus errores y ajustan su comportamiento.
+
+- **Ejemplo**: Un automóvil autónomo que ajusta sus acciones en función de los datos que recopila de la carretera.
+
+---
+
+## 💡 Conclusión
+
+¡Y ahí lo tienes! Ahora tienes una idea clara de qué son los agentes inteligentes y cómo pueden operar en diferentes entornos. Los agentes inteligentes son la base de muchos avances en IA, y al comprender cómo funcionan, podemos diseñar sistemas más autónomos y eficientes.
+
+¿Listo para construir tu propio agente inteligente? 🚀
+
+---
+
+### 📚 Fuentes recomendadas:
+
+- [Artificial Intelligence: A Modern Approach](https://www.pearson.com/en-us/subject-catalog/p/artificial-intelligence-a-modern-approach/P200000008076)
+  - consultable en: [4ta edicion](https://drive.google.com/file/d/1NnuWsMe8HVppwYaLZLJJGuRj6RDInJIP/view?usp=sharing)
+- [DEV Community: Types of Agents in AI](https://dev.to/hirendhaduk_/6-types-of-intelligent-agents-in-ai-1ac3)
+- [Artificial Intelligence Documentation](https://artificialintelligence.readthedocs.io)
+
+</CourseLayout>

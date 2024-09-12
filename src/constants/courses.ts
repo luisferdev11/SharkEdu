@@ -57,6 +57,12 @@ export const coursesSemester4: Course[] = [
     link: "/course/estructuras-datos",
     teacher: "Alex Soto",
   },
+  {
+    title: "Fundamentos de Inteligencia Artificial",
+    description: "Introducción a la Inteligencia Artificial",
+    link: "/course/fundamentos-inteligencia-artificial",
+    teacher: "Edgar Catalán",
+  },
 ];
 
 export const semesters: Semester[] = [
