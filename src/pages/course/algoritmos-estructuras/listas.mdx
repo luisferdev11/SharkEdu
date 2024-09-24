@@ -7,6 +7,61 @@ import CourseLayout from "../../../layouts/CourseLayout.astro";
 import { algoritmosEstructurasSections as sections } from "../../../constants/sections";
 
 <CourseLayout sections={sections}>
-# Listas
-la ura no esta la ura se fue 
+# Listas 
+
+## ¿Qué es una lista?
+
+Una **lista** es una estructura de datos que almacena una secuencia ordenada de elementos. Cada elemento de la lista puede ser accedido por su posición.
+A diferencia de arrays o vectores, las listas son más flexibles en cuanto al tamaño, ya que permiten la inserción y eliminación de elementos sin necesidad de reorganizar toda la secuencia.
+
+Una lista puede tener **nodos** que contienen dos partes: el valor del elemento y una referencia al siguiente nodo. En algunas variasntes de las listas,
+ también puede contener una referencia al nodo anterior.
+
+### Operaciones comunes:
+- **insertar**: Agrega un elemento en una posición específica o al final de la lista.
+- **eliminar**: Elimina un elemento de una posición específica.
+- **acceder**: Recupera el valor de un elemento dado su índice o posición.
+
+## Tipos de Listas y ¿Qué es cada una?
+
+### 1. Lista Simplemente Enlazada
+
+Una **lista simplemente enlazada** es una estructura de datos lineal donde cada nodo tiene un valor y una referencia al siguiente nodo de la lista. Esta lista no tiene referencias hacia nodos anteriores, lo que significa que solo se puede recorrer en una dirección.
+
+- **Características**:
+  - Cada nodo apunta al siguiente nodo.
+  - El último nodo apunta a `null` indicando el final de la lista.
+  
+- **Usos**:
+  - Cuando se necesita insertar o eliminar nodos con frecuencia y se prioriza el ahorro de memoria.
+
+### Lista Doblemente Enlazada
+Una lista doblemente enlazada es similar a la lista simplemente enlazada, pero cada nodo tiene una referencia  al nodo siguiente y al nodo anterior. 
+Esto permite recorrer la lista en ambas direcciones, lo cual facilita operaciones como eliminación o inserción desde cualquier posición de la lista.
+
+- **Características**:
+    - Cada nodo contiene referencias a su nodo anterior y a su nodo siguiente.
+    - Se puede recorrer tanto hacia adelante como hacia atrás.
+- **Usos**:
+    - Cuando es necesario navegar y modificar los datos en ambas direcciones, como en navegadores de historial de páginas.
+
+### Lista Circular
+Una lista circular es una variante de las listas enlazadas en la cual el último nodo de la lista apunta de nuevo al primer nodo, formando un círculo cerrado. 
+Esta estructura puede ser útil cuando se necesita un ciclo continuo de elementos.
+- **Características**:
+    - El último nodo apunta al primero.
+    - Se puede recorrer de manera infinita si no se detiene explícitamente.
+- **Usos**:
+    - Implementación de buffers circulares, manejo de tareas en bucles continuos.
+
+### Lista Circular Doblemente Enlazada
+
+Una lista circular Doblemente enlazada es una variante de la lista enlazada en la que se tiene un puntero tanto al primer nodo (cabeza) como al último nodo (cola) de la lista. 
+Esto optimiza la inserción o eliminación de elementos en ambos extremos de la lista.
+- **Características**:
+    - Cada nodo tiene un puntero al siguiente y anterior, La Cabeza de la lista apunta a el ultimo elemento.
+    - Inserción y eliminación rápidas en ambos extremos.
+- **Usos**:
+    - Cuando se necesita acceso eficiente tanto al principio como al final de la lista,
+
 </CourseLayout>

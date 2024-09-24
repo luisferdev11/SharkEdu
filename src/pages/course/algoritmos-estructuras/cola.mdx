@@ -7,6 +7,22 @@ import CourseLayout from "../../../layouts/CourseLayout.astro";
 import { algoritmosEstructurasSections as sections } from "../../../constants/sections";
 
 <CourseLayout sections={sections}>
-# la cola
+# Cola
+## ¿Qué es la Cola?
+
+Una **cola** es una estructura de datos que sigue el principio **FIFO** (*First In, First Out*), el primer elemento que entra, el primero que sale.
+Se puede imaginar como una fila de personas esperando para ser atendidas, donde la primera persona en llegar es la primera en ser atendida,
+y los nuevos elementos se agregan al final de la fila.
+
+- **Operaciones principales dentro de la Cola**:
+  - `enqueue`: agrega un elemento al final de la cola.
+  - `dequeue`: elimina el primer elemento de la cola.
+  - `front`: permite ver el primer elemento de la cola sin eliminarlo.
+  
+### Usos de la Cola
+
+- Gestión de tareas o procesos en sistemas operativos.
+- Colas de impresión, donde los documentos se procesan en el orden en que fueron solicitados.
+- Algoritmos de búsqueda en anchura (*breadth-first search*) en grafos y árboles.
 
 </CourseLayout>
